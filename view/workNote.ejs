@@ -1,0 +1,18 @@
+<%- include(dirName + '/view/partials/header.ejs')%>
+
+
+
+    <form class="row d-flex col-lg-12 d-flex justify-content-centers "action="/work" method="post">
+        <Input class="" type="text" name="taskMessageWork"></Input>  
+        <input class="" type="submit" id="message">
+    </form>
+    <div id="taskRender" class="noteContainer col-lg-2 w-100">
+        <%if(locals.taskArray) {%>
+            <%for(var i =0; i<taskArray.length;i++){%>
+                <div class="Note row w-100"><%=taskArray[i]%></div>
+            <%}%>
+        <%}else{%>        
+        <%}%>
+    </div>
+
+<%- include(dirName +'/view/partials/footer.ejs')%>
