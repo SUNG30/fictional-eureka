@@ -1,11 +1,18 @@
 <%- include(dirName + '/view/partials/header.ejs')%>
 
 
-
-    <form class="row d-flex col-lg-12 d-flex justify-content-centers "action="/work" method="post">
-        <Input class="" type="text" name="taskMessageWork"></Input>  
-        <input class="" type="submit" id="message">
-    </form>
+<!-- //input field and submit button -->
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-lg-6">
+                <form class=" d-flex" action="/work" method="post">
+                    <Input class="" type="text" name="taskMessageWork"></Input>  
+                    <input class="" type="submit" id="message">
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- //task render -->
     <div id="taskRender" class="container col-lg-2 w-50 d-flex justify-content-centers">
        <div class="row">
             <%if(locals.taskArray) {%>
